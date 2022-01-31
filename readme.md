@@ -1,6 +1,10 @@
 My results from Sanjeev Thiyagarajan's youtube video
 https://www.youtube.com/watch?v=gm_L69NHuHM
 
+TODO:
+    get rid of local node_modules directory
+    get dev and prod to ru  simultaneously (prod @ 4000, dev @ 4001) 
+
 
 alias dcu="docker-compose up -d"
 
