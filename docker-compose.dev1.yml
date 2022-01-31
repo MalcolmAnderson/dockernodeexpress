@@ -1,0 +1,22 @@
+version: "3"
+services:
+  node-app:
+    build:
+      context: .
+      args:
+        NODE_ENV: development
+    image: node-app-image
+    container_name: node-app-dev
+    command: [ "npm", "run", "dev" ]
+    networks:
+      - node-app
+    ports:
+      - "4001:3000"
+    volumes:
+      - ./:/app
+      - /app/node_modules
+    env_file:
+      - ./.env
+networks:
+  node-app:
+    name: node-app

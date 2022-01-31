@@ -1,0 +1,14 @@
+version: "3"
+# networks:
+#   node-app-dev: node-app
+services:
+  node-app:
+    container_name: node-app-dev
+    volumes:
+      - ./:/app
+      - /app/node_modules
+    environment:
+      - NODE_ENV=development
+    command: [ "npm", "run", "dev" ]
+    ports:
+      - "4001:3000"

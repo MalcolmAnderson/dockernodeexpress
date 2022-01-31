@@ -1,0 +1,10 @@
+version: "3"
+# networks:
+#   name: node-app
+services:
+  node-app:
+    build: .
+    image: node-app-image
+    # container_name: node-app
+    env_file:
+      - ./.env
